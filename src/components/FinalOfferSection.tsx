@@ -70,7 +70,7 @@ const FinalOfferSection = () => {
             <FaShieldAlt className="text-green-500 text-5xl" />
           </div>
           <h3 className="text-2xl font-bold text-gray-900 mb-3">
-            You&appos;re Protected by My 14-Day Money-Back Guarantee
+            You&apos;re Protected by My 14-Day Money-Back Guarantee
           </h3>
           <p>
             Try everything for 14 days. If you don’t feel it’s worth every penny, just email and we’ll refund you — no questions asked.
