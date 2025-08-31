@@ -32,7 +32,7 @@ const testimonials: Testimonial[] = [
 
 const SocialProof = () => {
   return (
-    <section className="bg-[#f9fafb] py-20 px-6">
+    <section id="success-stories" className="bg-[#f9fafb] py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
           Don’t Just Take Our Word for It.

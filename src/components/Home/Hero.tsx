@@ -3,7 +3,7 @@ import React from "react";
 
 const Hero = () => {
     return (
-        <section className="relative h-screen flex items-center justify-center px-6 md:px-12 text-center overflow-hidden">
+        <section id="home" className="relative h-screen flex items-center justify-center px-6 md:px-12 text-center overflow-hidden">
 
             {/* Background Image with Blur and Gradient Overlay */}
             <div className="absolute inset-0 z-0">

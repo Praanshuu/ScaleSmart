@@ -63,7 +63,12 @@ const Bonuses = () => {
         </div>
 
         <div className="mt-16">
-          <button className="px-14 py-4 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white rounded-full text-2xl font-bold shadow-lg transition duration-300 transform hover:scale-105">
+          <button className="px-14 py-4 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white rounded-full text-2xl font-bold shadow-lg transition duration-300 transform hover:scale-105" onClick={() => {
+              const el = document.getElementById("contact");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}>
             Claim All Bonuses
           </button>
         </div>

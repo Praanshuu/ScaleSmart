@@ -36,16 +36,27 @@ const HowIGrow = () => {
             Here’s How I Help You{" "}
             <span className="text-orange-600">Grow</span>
           </h2>
-          <p className="text-gray-600 max-w-xl">
+          <p className="text-white-600 max-w-xl">
             Proven tools, personalized strategy, and accountability to turn
             your goals into results.
           </p>
         </div>
         <div className="flex gap-4 mt-6 md:mt-0">
-          <button className="bg-black text-white px-6 py-2 rounded-full font-semibold hover:bg-gray-800 transition">
+          <button className="bg-black text-white px-6 py-2 rounded-full font-semibold hover:bg-gray-800 transition" onClick={() => {
+              const el = document.getElementById("benefits");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}>
             View Benefits
           </button>
-          <button className="border border-black px-6 py-2 rounded-full font-semibold hover:bg-black hover:text-white transition">
+          
+          <button className="border border-black px-6 py-2 rounded-full font-semibold hover:bg-gray-800 transition" onClick={() => {
+              const el = document.getElementById("contact");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}>
             Free Call
           </button>
         </div>

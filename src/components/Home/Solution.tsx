@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Solution = () => {
   return (
-    <section className="bg-blue-50 py-20">
+    <section id="solutions" className="bg-blue-50 py-20">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Image Side */}

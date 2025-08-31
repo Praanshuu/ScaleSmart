@@ -3,13 +3,13 @@ import React from "react";
 import Image from "next/image";
 
 const companies = [
-  { name: "Black Point Security", logo: "/logo/1.png" },
-  { name: "PointCard", logo: "/logo/2.png" },
-  { name: "Sprint Airwave", logo: "/logo/3.png" },
-  { name: "RABPoint", logo: "/logo/4.png" },
-  { name: "Loxmet", logo: "/logo/5.png" },
-  { name: "Carollinum", logo: "/logo/6.png" },
-  { name: "Banking Co", logo: "/logo/7.png" },
+  { name: "Black Point Security", logo: "/logo/logo1nbg.png" },
+  { name: "PointCard", logo: "/logo/logo2nbg.png" },
+  { name: "Sprint Airwave", logo: "/logo/logo3nbg.png" },
+  { name: "RABPoint", logo: "/logo/logo4nbg.png" },
+  { name: "Loxmet", logo: "/logo/logo5.png" },
+  { name: "Carollinum", logo: "/logo/logo1nbg.png" },
+  { name: "Banking Co", logo: "/logo/logo2nbg.png" },
 ];
 
 const Credentials = () => {
@@ -28,8 +28,8 @@ const Credentials = () => {
               <Image
                 src={company.logo}
                 alt={company.name}
-                width={100}
-                height={100}
+                width={110}
+                height={110}
                 className="mx-auto object-contain"
               />
 

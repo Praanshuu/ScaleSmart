@@ -4,25 +4,41 @@ import React, { useEffect, useState } from "react";
 import { FaBolt, FaClock, FaShieldAlt } from "react-icons/fa";
 
 const FinalOfferSection = () => {
-  // Countdown timer (48 hours from mount)
-  const calculateTimeLeft = () => {
-    const difference = +new Date(new Date().getTime() + 48 * 60 * 60 * 1000) - +new Date();
-    let timeLeft = { hours: "00", minutes: "00", seconds: "00" };
+  const [timeLeft, setTimeLeft] = useState({ hours: "00", minutes: "00", seconds: "00" });
+
+  // 🔁 Function to calculate remaining time
+  const calculateTimeLeft = (deadline: number) => {
+    const now = new Date().getTime();
+    const difference = deadline - now;
 
     if (difference > 0) {
-      timeLeft = {
+      return {
         hours: String(Math.floor((difference / (1000 * 60 * 60)) % 24)).padStart(2, "0"),
         minutes: String(Math.floor((difference / 1000 / 60) % 60)).padStart(2, "0"),
         seconds: String(Math.floor((difference / 1000) % 60)).padStart(2, "0"),
       };
+    } else {
+      return { hours: "00", minutes: "00", seconds: "00" };
     }
-    return timeLeft;
   };
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-
   useEffect(() => {
-    const timer = setInterval(() => setTimeLeft(calculateTimeLeft()), 1000);
+    // Get or set deadline in localStorage
+    let deadline = localStorage.getItem("offerDeadline");
+
+    if (!deadline) {
+      const newDeadline = new Date().getTime() + 48 * 60 * 60 * 1000; // 48 hours
+      localStorage.setItem("offerDeadline", newDeadline.toString());
+      deadline = newDeadline.toString();
+    }
+
+    const deadlineTime = parseInt(deadline);
+
+    // Set interval to update countdown every second
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft(deadlineTime));
+    }, 1000);
+
     return () => clearInterval(timer);
   }, []);
 
@@ -43,7 +59,12 @@ const FinalOfferSection = () => {
 
           <button
             className="inline-flex items-center justify-center space-x-3 bg-orange-600 text-white px-12 py-5 rounded-full text-xl font-semibold shadow-lg hover:bg-orange-700 transition focus:outline-none focus:ring-4 focus:ring-orange-400 animate-pulse mx-auto"
-            aria-label="Join Now and Get Instant Access"
+            aria-label="Join Now and Get Instant Access" onClick={() => {
+              const el = document.getElementById("contact");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
           >
             <FaBolt className="text-orange-200 text-2xl" />
             <span>Join Now & Get Instant Access</span>
@@ -70,7 +91,7 @@ const FinalOfferSection = () => {
             <FaShieldAlt className="text-green-500 text-5xl" />
           </div>
           <h3 className="text-2xl font-bold text-gray-900 mb-3">
-            You&appos;re Protected by My 14-Day Money-Back Guarantee
+            You&apos;re Protected by My 14-Day Money-Back Guarantee
           </h3>
           <p>
             Try everything for 14 days. If you don’t feel it’s worth every penny, just email and we’ll refund you — no questions asked.
@@ -103,7 +124,12 @@ const FinalOfferSection = () => {
 
           <button
             className="bg-black text-white rounded-full py-5 px-12 text-xl font-semibold shadow-lg hover:bg-gray-900 transition transform hover:scale-105"
-            aria-label="Ready to Build a Business You’re Proud Of? Enroll Now"
+            aria-label="Ready to Build a Business You’re Proud Of? Enroll Now" onClick={() => {
+              const el = document.getElementById("contact");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
           >
             Ready to Build a Business You’re Proud Of? Enroll Now
           </button>

@@ -34,7 +34,15 @@ const Problem = () => {
             ))}
           </ul>
 
-          <button className="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 transition text-white font-semibold px-6 py-3 rounded-full shadow-md">
+          <button
+            className="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 transition text-white font-semibold px-6 py-3 rounded-full shadow-md"
+            onClick={() => {
+              const el = document.getElementById("solutions");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
             Let’s Find Solutions
             <svg
               xmlns="http://www.w3.org/2000/svg"

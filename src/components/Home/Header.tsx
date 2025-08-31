@@ -2,15 +2,17 @@
 
 import React, { useState, useEffect } from "react";
 import { FaRegCalendarCheck } from "react-icons/fa6";
+import Link from "next/link"; // Import Link from Next.js
 
 const navLinks = [
-  "Home",
-  "About",
-  "Coaching",
-  "Success Stories",
-  "Blog",
-  "Contact",
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#solutions" },
+  { name: "Service", href: "#service" },
+  { name: "Success Stories", href: "#success-stories" },
+  { name: "Pricing", href: "#pricing" },
+  { name: "Contact", href: "#contact" },
 ];
+
 
 const Header = () => {
   const [show, setShow] = useState(true);
@@ -52,19 +54,19 @@ const Header = () => {
         {/* Nav Links */}
         <nav className="hidden md:flex gap-6 text-sm font-medium">
           {navLinks.map((link) => (
-            <a
-              key={link}
-              href={`#${link.toLowerCase().replace(/\s/g, "-")}`}
+            <Link
+              key={link.name}
+              href={link.href}
               className="hover:text-blue-600 transition-colors"
             >
-              {link}
-            </a>
+              {link.name}
+            </Link>
           ))}
         </nav>
 
         {/* CTA Button */}
         <a
-          href="#book"
+          href="#contact"
           className="ml-auto md:ml-0 flex items-center gap-2 bg-black text-white text-sm font-medium px-5 py-2.5 rounded-full shadow hover:scale-105 transition-transform"
         >
           <FaRegCalendarCheck className="text-base" />

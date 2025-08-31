@@ -28,8 +28,13 @@ const stackItems = [
 
 const StackTheValue = () => {
   return (
-    <section className="bg-white py-24 px-8 md:px-12">
-      <div className="max-w-3xl mx-auto bg-gradient-to-r from-green-50 to-white rounded-2xl p-8 shadow-lg">
+    <section id="pricing" className="bg-white py-24 px-8 md:px-12">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+          What You Are Getting
+        </h2>
+      </div>
+      <div className="max-w-3xl mx-auto mt-8 bg-gradient-to-r from-green-50 to-white rounded-2xl p-8 shadow-lg">
         <ul className="space-y-6">
           {stackItems.map((item, index) => (
             <li
@@ -49,7 +54,7 @@ const StackTheValue = () => {
 
         <div className="mt-12 text-right">
           <p className="text-xl font-semibold text-gray-700 tracking-wide">Total Real-World Value:</p>
-          <p className="text-4xl font-extrabold text-green-800 drop-shadow-md">$6,000+</p>
+          <p className="text-4xl font-extrabold text-green-800 drop-shadow-md">$6,000</p>
         </div>
       </div>
     </section>

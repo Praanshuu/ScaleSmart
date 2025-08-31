@@ -37,7 +37,7 @@ const benefits = [
 
 const Benefits = () => {
   return (
-    <section className="relative bg-white py-24 px-4 sm:px-8 md:px-12 lg:px-20">
+    <section id="benefits" className="relative bg-white py-24 px-4 sm:px-8 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6">
           The Benefits You’ll Gain

@@ -1,20 +1,18 @@
-import Hero from "@/components/Hero";
-import Problem from "@/components/Problem";
-import Solution from "@/components/Solution";
-import Credentials from "@/components/Credentials";
-import Benefits from "@/components/Benefits";
-import SocialProof from "@/components/SocialProof";
-import GodfatherOffer from "@/components/GodFatherOffer";
-import Bonuses from "@/components/Bonuses";
-import StackTheValue from "@/components/StackTheValue";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import FinalOfferSection from "@/components/FinalOfferSection";
+import Hero from "@/components/Home/Hero";
+import Problem from "@/components/Home/Problem";
+import Solution from "@/components/Home/Solution";
+import Credentials from "@/components/Home/Credentials";
+import Benefits from "@/components/Home/Benefits";
+import SocialProof from "@/components/Home/SocialProof";
+import GodfatherOffer from "@/components/Home/GodFatherOffer";
+import Bonuses from "@/components/Home/Bonuses";
+import StackTheValue from "@/components/Home/StackTheValue";
+import FinalOfferSection from "@/components/Home/FinalOfferSection";
+import ContactForm from "@/components/Home/ContactForm";
 
 export default function Home() {
   return (
     <main>
-      <Header />
       <Hero />
       <Problem />
       <Solution />
@@ -25,7 +23,7 @@ export default function Home() {
       <Bonuses />
       <StackTheValue />
       <FinalOfferSection />
-      <Footer />
+      <ContactForm />
     </main>
   );
 }
